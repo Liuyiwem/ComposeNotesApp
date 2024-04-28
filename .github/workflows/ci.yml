@@ -5,7 +5,6 @@ on:
     branches: [ "master", "develop" ]
   pull_request:
     branches: [ "master", "develop" ]
-  workflow_dispatch:
 
 jobs:
   unit-test:
@@ -36,7 +35,6 @@ jobs:
 
   instrumentation-test:
     name: Perform Instrumentation Testing
-    needs: [unit-test]
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -59,7 +57,7 @@ jobs:
       - name: Run Instrumentation tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
-          api-level: 31
+          api-level: 34
           target: google_apis
           arch: x86_64
           script: ./gradlew connectedCheck
