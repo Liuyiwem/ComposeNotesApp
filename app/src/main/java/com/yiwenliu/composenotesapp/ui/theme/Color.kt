@@ -2,7 +2,8 @@ package com.yiwenliu.composenotesapp.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val DarkGray = Color(0xFF202020)
+val DarkGray = Color(0xFF535252)
+val Blue = Color(0xFF2196F3)
 val LightBlue = Color(0xFFD7E8DE)
 
 val RedOrange = Color(0xffffab91)

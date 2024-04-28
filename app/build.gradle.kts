@@ -16,7 +16,7 @@ android {
         versionCode = ProjectConfig.versionCode
         versionName = ProjectConfig.versionName
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "com.yiwenliu.composenotesapp.HiltTestRunner"
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -59,8 +59,10 @@ dependencies {
     implementation(AndroidX.appCompat)
     implementation(AndroidX.lifecycleRuntime)
 
+    implementation(platform(Compose.composeBom))
     implementation(Compose.ui)
-    implementation(Compose.material)
+    implementation(Compose.uiGraphics)
+    implementation(Compose.material3)
     implementation(Compose.uiToolingPreview)
     implementation(Compose.activityCompose)
     implementation(Compose.viewModelCompose)
@@ -105,18 +107,4 @@ dependencies {
 
     debugImplementation(Compose.uiTooling)
     debugImplementation(Testing.uiTestManifest)
-
-
-//    implementation(platform("androidx.compose:compose-bom:2023.08.00"))
-//    implementation("androidx.compose.ui:ui")
-//    implementation("androidx.compose.ui:ui-graphics")
-//    implementation("androidx.compose.ui:ui-tooling-preview")
-//    implementation("androidx.compose.material3:material3")
-//    testImplementation("junit:junit:4.13.2")
-//    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-//    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-//    androidTestImplementation(platform("androidx.compose:compose-bom:2023.08.00"))
-//    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
-//    debugImplementation("androidx.compose.ui:ui-tooling")
-//    debugImplementation("androidx.compose.ui:ui-test-manifest")
 }

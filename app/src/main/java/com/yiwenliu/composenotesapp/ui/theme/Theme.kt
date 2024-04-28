@@ -1,24 +1,25 @@
 package com.yiwenliu.composenotesapp.ui.theme
 
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.darkColors
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.MaterialTheme.shapes
+import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
-private val DarkColorPalette = darkColors(
+private val DarkColorPalette = darkColorScheme(
     primary = Color.White,
-    background = DarkGray,
+    background = Blue,
     onBackground = Color.White,
     surface = LightBlue,
-    onSurface = DarkGray
+    onSurface = DarkGray,
 )
 
 @Composable
 fun ComposeNotesAppTheme(darkTheme: Boolean = true, content: @Composable() () -> Unit) {
     MaterialTheme(
-        colors = DarkColorPalette,
+        colorScheme = DarkColorPalette,
         typography = Typography,
-        shapes = Shapes,
+        shapes = shapes,
         content = content
     )
 }
